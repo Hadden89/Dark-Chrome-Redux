@@ -1,0 +1,65 @@
+2.3
+* Updated to chromium 80
+* Few adjustments in colors contrast.
+* Some old code was removed
+
+2.2
+* Updated to chromium 76
+* Code optimized and built around the new chromium dark theme
+* Most dead code was removed
+* Better handling of css style for tables (specific selectors)
+* Crx package is an indipendent archive now.
+* Old changelogs are now in the archive
+
+2.1:
+* Updated to chromium 75
+* Fixed link colors and table backgrounds
+* Crx package
+
+2.0:
+* Update to chromium 73
+* Color scheme is now behind --var (easier to read/edit)
+* Few adjustment for material design flags
+* Fixes for chrome pages
+* Removed a lot of useless comments
+* Removed a lof of old code
+* Removed not necessary transparencies
+* Updated feline logo
+
+1.9:
+* Few more pages now use specific code
+* Fixed commit color (which is yellow) on sync page
+* Fixed some poor readable text (gray on black)
+* Fixed some tables and input colors
+* Removed legacy vivaldi://print code
+* Updated some chrome:// pages
+
+1.3-1.8:
+* Changed --cr-page-host_-_color;
+* Changed cat.png (well actually is the same);
+* Cleaned up code: the one used in various pages is now in the first section;
+* Fixed invisible areas in vivaldi://sync-internals;
+* Fixed tree views invert mistake;
+* Fixed most text which had become invisible;
+* Fixed most tables in chrome:// pages;
+* Fixed vivaldi://print: wasn't dark anymore after buttons invert;
+* Improved color contrast on links, texts and tables;
+* Inverted most buttons/input/textbox/select etc;
+* More chrome:// pages now uses specific values (and not html/body ones);
+* Minor color changes: most g-blue was replaced with shades of gray;
+* Minor color changes: slightly changed shades of red/green/gray;
+* More tables now use specific selectors (which should be helpful);
+* Removed background/permissions (weren't useful).
+* Removed legacy vivaldi://extension code.
+* Some edits where selectors were changed/add/removed.
+
+1.2 
+* Starting to cover more/most chrome:// pages
+* Optimizing code (there were an ugly amount of comments :D)
+
+1.1
+* Optimized for few more pages as chrome://settings
+
+1.0 
+* First version
+* Optimized for few pages as chrome://flags and chrome://extensions

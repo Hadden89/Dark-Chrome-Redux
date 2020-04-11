@@ -1,0 +1,272 @@
+/* Dark Chrome Redux -- Version 2.3 */
+/* Updated to Vivaldi 2.11.1811.28 */
+/* Chromium version: 80.0.3987.88 */
+/* Some colors updates           */
+
+:root { /*few of them will go away*/
+	--HalfGlass: rgba(0, 0, 0, 0.5);		--DarkGlass: rgba(255, 255, 255, 0.5); 
+	--DarkerGray: rgb(51,51,51); /*333333*/ --DarkGray: rgb(68, 68, 68);    /*444444*/ 
+	--Gray: rgb(100,100,100);    /*646464*/	--LightGray: rgb(128,128,128);  /*808080*/ 
+	/*--LighterGray: rgb(154, 154, 0);*/ /*#9A9A00*/ /*remove?*/ 
+	--DarkerRed: rgb(189,0,0);   /*BD0000*/	--DarkRed: rgb(210,0,0); 		/*D20000*/
+	--LightRed: rgb(255, 0, 0);  /*FF0000*/	--Orange: rgb(255, 156, 0); 	/*FF9C00*/
+	--DarkGreen: rgb(0,114,4);   /*007204*/	--DarkerGreen: rgb(0, 140, 4);  /*008c04*/
+	--LightGreen: rgb(0,249,0);  /*00F900*/ --LighterGreen: rgb(96,255,96);	/*60FF60*/
+}
+html[dark]{background-color:  var(--DarkerGray);} /*flag page*/
+
+body { /*will affect any page*/
+    color: var(--DarkerGray);
+    background-color:  var(--DarkerGray);
+    --cr-link-color: var(--LightGreen); /*links*/
+    --google-blue-refresh-300: var(--LightGray); /*remove blue text*/
+    --cr-secondary-text_-_color: var(--LightGreen); /*links*/
+    --interactive-color: var(--LighterGreen); /*links@flags*/
+    --link-color: var(--LightGray); /*flags*/
+    /*--google-blue-300: var(--LightGreen);*/ /*flags*/
+    /*--google-blue-600: white;*/ /*discards*/
+}
+body div {color: white;} /*dwn-internals*/
+body:is(.body-container) {background-color: inherit;} /*flag page*/
+#experiment-reset-all {color: black;} /*flag page*/
+[is='action-link'], [is='action-link']:active,
+a, a:-webkit-any-link, span.url {color: var(--LightGreen);}
+h1, h4, /*download internals*/
+h2, #info h2, /*remove gblue on signin-internals/supervised*/
+h3, /*interstitials*/
+ol, /*terms*/
+b, /*blob internals*/
+p, ul, label, b, pre, span, span.type,
+fieldset {color: white;} /*bluetooth internals*//*about*/
+.search-container {color: white;} /*search boxes*/
+
+/*test button*/
+/*button:not(.primary):not(.button-check-update) {color: var(--HalfGlass);}*/ 
+input:not([type]) {filter: invert(.9);} /*accessibility*/
+
+/*buttons*/
+/*
+input[type="checkbox" i], input[type="submit" i], input[type="text" i],
+input[type="search" i], input[type="file" i], input[type="button" i],
+input#download-url,*/ /*dwn-internals*/
+/*button,*/ /*select*//*, textarea {filter: invert(.9);}*/
+/*about - apps */
+#footer {background-color: var(--DarkGray);}
+#footer-border {height: 0px;}
+#chrome-web-store-title {color: var(--LightGreen);}
+/*accessibility*/
+#native_ui_delay,
+:-webkit-any(button, input[type='button'], input[type='submit']), input[type='url']:not(.custom-appearance) {filter: invert(.9);} 
+/*appcache*/
+.appcache-summary {color:white; background-color: var(--DarkGray); border-top: none}
+/*autofill-internals*/
+.log-entry[scope='AbortParsing'] {background-color: var(--DarkGray);}
+/*bt-internals*/
+.page-header, .sidebar-content {background-color: var(--DarkerGray)}
+/*
+.sidebar-content .selected button {color: var(--LightGreen);}
+.sidebar-content button:hover  {background-color: var(--DarkGray)}
+*/
+section#devices table th {background-color: var(--DarkerGray);}
+
+/*components-conflicts*/
+.component {color: white;}
+.section-header {background-color:  var(--DarkGray); border-top: none;}
+#blurb-container, #third-party-conflicts-status  {color: white;}
+/*crashes*/
+#disabledMode h2  {color: var(--DarkerRed);}
+#countBanner {background-color: var(--DarkerGray);}
+#crashList a:visited {color: var(--LightGreen);}
+/*credits*/
+.product {color: white; background-color: var(--DarkGray);}
+.product .show, .product .homepage::before {color: var(--LightGreen);}
+div.licence {background-color: var(--DarkGray);}
+/*devicelog*/
+.log-level-event {color: var(--Orange);}
+.log-level-user {color: var(--LightGreen);}
+/*devices*/ .cloud-print-message {color: white;}
+/*discards*/ /*have to fix it*/
+discards-main {color: var(--LightGray);} 
+table#tab-discard-info-table {background-color: var(--DarkGray);}
+/*dwn-internals*/ .sub-text{color: white;}
+/*gcm-internals*/
+.flexbar button#refresh, .flexbar button#recording, .flexbar button#clear-logs {
+	background-color: var(--DarkGray); color: white;
+}
+table#device-info tr:nth-child(even) {color: white;}
+table.log-table tr th {background-color: var(--Gray);}
+ /*gpu*/
+#info-view .feature-green  {color: var(--LightGreen);}
+#info-view .feature-yellow  {color: var(--Orange);}
+input#copy-to-clipboard {filter: invert(.9);} 
+/*indexdb*/
+.indexeddb-summary {color: white; background-color: var(--HalfGlass); border-top: none;}
+/*inspect*/
+#caption {color: white;} 
+.subrow-box .subrow .name {color: white;}  
+.action {color: var(--LightGreen);} 
+.content-header {background: var(--DarkerGray);}
+/*
+.tab-header.selected button {color: white;} 
+.tab-header > button {background-color: var(--DarkerGray);}
+.tab-header > button {background-color: var(--LighterGray);}
+.tab-header.selected button {color: var(--LighterGray);}
+*/
+.tab-header.selected button {color: var(--HalfGlass); background-color: transparent;} 
+.tab-header:not(.selected) > button {color: black; background-color: transparent;} 
+.tab-header > button {background-color: var(--DarkerGray);}
+button#port-forwarding-config-open,button#tcp-discovery-config-open {filter: invert(.9);} 
+/*interventions*/
+.tab-select .active-tab {background: var(--DarkerGray);}
+.section-header {color: white;} 
+table#previews-flags-table th {background-color: var(--DarkGray);} /*fix table*/
+.table-name {color: white;} 
+table#message-logs-table th {background: var(--DarkGray);}
+input#log-search-bar {filter: invert(.9);} 
+#expand-log-button, #clear-log-button, #ignore-blacklist-button {background: var(--DarkGray);}
+table#blacklisted-hosts-table th, table#nqe-logs-table th{background: var(--DarkGray);}
+/*invalidations*/
+#invalidations-info .lead  {color: white;} 
+table#objectsid-table-container th {color: white; background: var(--DarkGray);}
+textarea#invalidations-log,
+textarea#internal-display {color: white; background: var(--DarkGray);}
+button#request-detailed-status {filter: invert(.9);}
+/*interventionsint*/
+.inactive-tab {background: var(--Gray);}
+#previews-enabled-status{color: white;}
+table#previews-flags-table tr:nth-child(odd) td{color: white; background: var(--DarkGray);}
+table#previews-flags-table tr:nth-child(even) td{color: white;}
+table#message-logs-table{color: white;}
+.tab-content.selected-tab{color: white;}
+/*mediaengagement*/
+#copy-all-to-clipboard {filter: invert(.9);}
+table thead tr#config-table-header th {color: white; background: var(--DarkGray);}
+table tbody#config-table-body tr td.name-cell {color: white; background: var(--DarkGray);}
+table thead tr#engagement-table-header th {color: white; background: var(--DarkGray);}
+table tbody#engagement-table-body tr td:nth-child(1),
+table tbody#engagement-table-body tr td:nth-child(2),
+table tbody#engagement-table-body tr td:nth-child(3),
+table tbody#engagement-table-body tr td:nth-child(6),
+table tbody#engagement-table-body tr td:nth-child(7),
+table tbody#engagement-table-body tr td:nth-child(8) {color: white; background: var(--HalfGlass);}
+/*mediainternals*/
+#devtools-notice-window {color: white; background-color: var(--Gray);}
+tabs {color: white; background: var(--DarkerGray);}
+tabs > [selected] {color: black;}
+#save-log-button, #hide-players-button, #copy-all-player-button {filter: invert(.9);}
+tabpanels {background: var(--DarkerGray);}
+label.selectable-button {background: var(--DarkerGray);} 
+#copy-all-audio-button {filter: invert(.9);}
+table#general-audio-info-table th {background: var(--DarkGray);}
+table#general-audio-info-table td {color: white; background-color: var(--Gray);}
+.show-none-if-empty:empty:after {color: white;}
+#video-capture-capabilities-copy-button {filter: invert(.9);}
+table#video-capture-capabilities-table th {color: white; background-color: var(--Gray);}
+/*net-int*/
+#events-view-tab-content, .deindent-header{color: white;}
+#tab-list .selected{color: white;}
+/*netexport*/
+#start-logging, #log-max-filesize {filter: invert(.8);}
+/*ntp-tiles-internals*/
+table.section-details th {color: white; background: var(--Gray);}
+.section-details td {color: white; background: var(--DarkGray);}
+input#suggestions-fetch, input#submit-update {filter: invert(.9);}
+/*pwd-man-internals*/
+#logging-note, #log-entries {color: white;}
+/*policy*/
+input#filter.search-field-container, #reload-policies, #export-policies {filter: invert(.9);}
+.row.header {color: white; background-color: var(--Gray);}
+.policy.row, .no-policy {color: white; background-color: var(--DarkGray);}
+.policy.row:not(.conflict):hover,
+.expanded .policy.row:not(.conflict) {background-color: var(--DarkerGray);}
+.link img {filter: invert(.9);}
+/*predictors*/
+table#databaseTable, table#databaseTable thead tr {color: white; background-color: var(--DarkerGray);}
+tabbox#predictor-page th  {color: white; background-color: var(--DarkerGray);}
+tabbox#predictor-page tr td {color: white; background-color: var(--DarkerGray);}
+/*proc-internals*/
+.content-header, #general-info, #tree-view-container {color: white;}
+/*#tree-view-container {filter: invert(.9);}*/
+/*.tree-row[selected]:hover, tree:focus .tree-row[selected] {
+	background-color: var(--DarkerGray); border-color: white;
+}*/
+/*quota-internals*/
+table tr:nth-child(odd) {color: white; background: var(--DarkGray);}
+#dump-button {filter: invert(.9);}
+/*sandbox*/ #sandbox-status td {color: white;}
+/*safe-browsing*/
+.content {background-color: var(--DarkerGray);}
+form#get-referrer-chain-form {filter: invert(.8);}
+/*svc-work-internals*/
+.serviceworker-summary {color: white; background-color: var(--DarkGray); border-top: none;}
+.serviceworker-scope, .serviceworker-registration  {color: white;}
+.serviceworker-log, .unregister, .start  {filter: invert(.9);}
+/*signin-internals*/ table.signin-details {color: white;}
+/*site-engagement*/ .engagement-bar  {background-color: white;}
+/*supervised-usr-int*/ #try-url-input {filter: invert(.9);}
+/*system*/ #header {background-color: var(--DarkGray); border-color: white;}
+/*sync-internals*/
+/*about*/
+#dump-status, #import-status, #trigger-refresh,
+#request-start, #request-stop-keep-data, #request-stop-clear-data {filter: invert(.9);}
+#about-info h2  {color: white;}
+table.about-details tr:nth-child(odd) {background-color: var(--DarkGray);}
+table.about-details tr:nth-child(even) {color: white; background-color: var(--DarkerGray);}
+.traffic-event-entry .time {color: white;}
+.traffic-event-entry:hover {background-color: var(--DarkGray);}
+.traffic-event-entry-expanded .proto {color: white; background-color: var(--DarkerGray);}
+#typeInfo tr.ok > td {background-color: var(--DarkGreen);}
+#typeInfo tr.ok:nth-child(even) > td {color:white;}
+#typeInfo tr.disabled {background-color: var(--DarkerRed);}
+#typeInfo  tr.disabled:nth-child(even) > td {color:white;}
+/*commit to sync animation*/
+@-webkit-keyframes highlight1 {
+  0% {
+    background: var(--LightGray);
+  }
+  100% { /* commit flash */
+    background: var(--DarkerGray);
+  }
+}
+/*types*/
+table#type-counters-table tr:nth-child(odd) {background-color: var(--DarkGray);}
+table#type-counters-table tr:nth-child(even) {color: white; background-color: var(--DarkerGray);}
+/*data*/ #dump-to-text, #dump-to-file {filter: invert(.9);}
+/*events*/
+.toggle-button {filter: invert(.9);}
+#sync-events > tr:nth-child(even) {color: white;}
+/*sync node browser*/ 
+#node-browser-refresh-button {filter: invert(.9);}
+.tree-item > .tree-row {color: white; background-color: var(--DarkerGray);}
+tree:focus .tree-row[selected]  {background-color: var(--DarkGray); border-color: white;}
+#node-details tr:nth-child(odd) {background: var(--DarkGray);}
+#node-details tr:nth-child(even) {color: white;);}
+/*search*/
+#sync-search-query, #sync-search-submit {filter: invert(.9);}
+a.sync-search-quicklink {background-color: var(--DarkGray)}
+/*userevents*/
+#event-time-usec-input, #navigation-id-input, #create-event-button {filter: invert(.9);}
+/*trafficlog*/
+.traffic-event-entry-fullscreen .time {color: white;);}
+.traffic-event-entry-fullscreen:hover  {background-color: var(--DarkGray)}
+/*usb-internals*/
+#expandAll, #collapseAll, 
+#about_sync_data-value-btn,
+#extensions-value-btn,
+#mem_usage-value-btn {filter: invert(.9);}
+table#details.list tr:nth-child(odd) td {background-color: var(--DarkGray);}
+table.styled-table {color: white;}
+#test-device-name, #test-device-serial, #test-device-landing-page, 
+tbody#device-list tr td button, form#add-test-device-form button  {filter: invert(.9);}
+tbody#device-list tr:nth-child(odd) td {color: white;}
+
+/*usr-action*/
+table#user-actions-table tr th {background-color: var(--DarkGray);}
+table#user-actions-table tr td {color: white;background-color: var(--Gray);}
+/*version*/
+.version {color: white;}
+#outer {color: white; background: transparent;}
+#useragent {color: white;}
+#logo img:hover  {animation:spin 8s linear infinite;}	 
+@keyframes spin { 100% {transform:rotate(360deg); } }
+/*webrtc-logs*/ .log-banner {background-color: var(--DarkGray);}
