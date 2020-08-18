@@ -5,4 +5,4 @@ Please note: I'm not actual a developer, but just a vivaldi community member.
 
 Use this at your own risk.
 
-While is made for Vivaldi browser should actually work with any chromium browser.
+While is made for Vivaldi browser should actually work with most chromium browsers, Edge and Brave excluded perhaps, which have a more modified chromium user interface.
